@@ -1,12 +1,22 @@
 import React from "react";
 
-
 //create your first component
-const Home = () => {
+const Home = (props) => {
 	return (
-		<div>
+		<div className="inline-b">
+			<div><i className="far fa-clock"></i></div>
+			<div><p>{props.contador1}</p></div>
+			<div><p>{props.contador2}</p></div>
+			<div><p>{props.contador3}</p></div>
+			<div><p>{props.contador4}</p></div>
+			<div><p>{props.contador5}</p></div>
+			<div><p>{props.contador6}</p></div>
 		</div>
 	);
 };
+
+Home.propTypes = {
+	contador1: PropTypes.number
+  };
 
 export default Home;
