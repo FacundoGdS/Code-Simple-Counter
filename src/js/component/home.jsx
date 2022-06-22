@@ -15,8 +15,4 @@ const Home = (props) => {
 	);
 };
 
-Home.propTypes = {
-	contador1: PropTypes.number
-  };
-
 export default Home;

@@ -16,5 +16,11 @@ let contador5 = 0;
 let contador6 = 0;
 
 //render your react application
-ReactDOM.render(<Home contador1={contador1} contador2={contador2} contador3={contador3} contador4={contador4} contador5={contador5} contador6={contador6}/>, document.querySelector("#app"));
+setInterval( () => {ReactDOM.render(<Home contador1={contador1} contador2={contador2} contador3={contador3} contador4={contador4} contador5={contador5} contador6={contador6}/>, document.querySelector("#app")
+);
+if (contador6===9){
+        contador6=0
+    } else {contador6++};
+}, 1000);
+
 
