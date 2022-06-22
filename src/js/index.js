@@ -8,19 +8,21 @@ import "../styles/index.css";
 //import your own components
 import Home from "./component/home.jsx";
 
-let contador1 = 0;
-let contador2 = 0;
-let contador3 = 0;
-let contador4 = 0;
-let contador5 = 0;
-let contador6 = 0;
-
+let sec = 0;
 //render your react application
-setInterval( () => {ReactDOM.render(<Home contador1={contador1} contador2={contador2} contador3={contador3} contador4={contador4} contador5={contador5} contador6={contador6}/>, document.querySelector("#app")
+setInterval( () => {
+    let digit6 = Math.floor((sec / 100000) % 10);
+    let digit5 = Math.floor((sec / 10000) % 10);
+    let digit4 = Math.floor((sec / 1000) % 10);
+    let digit3 = Math.floor((sec / 100) % 10);
+    let digit2 = Math.floor((sec / 10) % 10);
+    let digit1 = Math.floor((sec / 1) % 10);
+    sec++
+    ReactDOM.render(<Home c1={digit6} c2={digit5} c3={digit4} c4={digit3} c5={digit2} c6={digit1}/>, document.querySelector("#app")
 );
-if (contador6===9){
-        contador6=0
-    } else {contador6++};
 }, 1000);
+
+
+//if (c6===9){c6=0} else {c6++}; It was a valid path.
 
 
